@@ -1,8 +1,19 @@
-# HOW TO GRAPHQL
+# React
+
+- declarative, looks after DOM
+- the declarative paradigm is called that because we declare that this is the state or data. All the different states accounted for in one big object.
+- the Name react, reacts to the state.
+- lego blocks, reusable components.
+- use react developer tools
+- undirectional data flow: virtual DOM, data trickles down to DOM.
+- Angular, everything built in, very opinionated
+- React, use other libs, mix and max, ui library
+
+## HOW TO GRAPHQL
 
 from: <https://www.howtographql.com/graphql-js/0-introduction>
 
-## What is a GraphQL Playground?
+### What is a GraphQL Playground?
 
 - A GraphQL IDE to work with a GraphQL API
 
@@ -136,3 +147,42 @@ id
   description
   }
   }
+
+## Setting up our project with Prisma and SQLite
+
+- First, let’s install the Prisma CLI by running the following command in your terminal:
+
+npm install @prisma/cli --save-dev
+
+- Create the prisma directory and then a file called schema.prisma by running the following commands in your terminal:
+
+mkdir prisma
+touch prisma/schema.prisma
+
+- You can think of the prisma.schema file as a database schema. It has three components:
+
+1. Data source: Specifies your database connection.
+2. Generator: Indicates that you want to genenerate Prisma Client.
+3. Data model: Defines your application models. Each model will be mapped to a table in the underlying database.
+
+- From the root directory of your project, create your first migration by running the following command in your terminal:
+
+npx prisma migrate save --experimental
+
+- Yes and init
+
+-then to actually execute the migration against your database:
+
+- npx prisma migrate up --experimental
+
+- You now have a database with a Link table!
+
+### Generating Prisma Client
+
+- npx prisma generate
+
+- Create a new file in the src/ directory called script.js
+
+- run new code:
+
+- node src/script.js
