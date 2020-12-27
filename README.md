@@ -1,13 +1,32 @@
 # React
 
-- declarative, looks after DOM
+- **declarative**, looks after DOM
 - the declarative paradigm is called that because we declare that this is the state or data. All the different states accounted for in one big object.
 - the Name react, reacts to the state.
 - lego blocks, reusable components.
 - use react developer tools
 - undirectional data flow: virtual DOM, data trickles down to DOM.
-- Angular, everything built in, very opinionated
+- Angular, everything built in, very **opinionated**
 - React, use other libs, mix and max, ui library
+
+- Babel and webpack, compatibility with js in older browsers.
+  -By default, Create React App includes a performance relayer that allows you to measure and analyze the performance of your application using different metrics.
+
+### reportWebVitals
+
+To measure any of the supported metrics, you only need to pass a function into the reportWebVitals function in index.js:
+
+reportWebVitals(console.log);
+
+## The job of a good React dev
+
+- decide on components
+- decide the state and where it lives
+- decide what changes when state changes
+
+## Notes
+
+- Environment setup for Mac, video 14, indispensible!
 
 ## HOW TO GRAPHQL
 
