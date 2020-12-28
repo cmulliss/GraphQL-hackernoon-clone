@@ -11,6 +11,7 @@
 
 - Babel and webpack, compatibility with js in older browsers.
   -By default, Create React App includes a performance relayer that allows you to measure and analyze the performance of your application using different metrics.
+  - never eject out of react-create-app
 
 ### reportWebVitals
 
