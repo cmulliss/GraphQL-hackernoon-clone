@@ -5,19 +5,23 @@ import './App.css'
 class App extends Component {
 
     state = {
-        string: 'Hello World'
+        monsters: [
+        ]
+    }
+// fetch returns a promise
+    componentDidMount() {
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(users => this.setState({monsters: users}))
     }
   render () {
     return (
       <div>
         <div className='App'>
-          <header className='App-header'>
-            <h1> Monsters Rolodex</h1>
-            <p>{this.state.string}</p>
-            <button onClick = {() => this.setState({string: "Hello Again"  })}>Change text</button>
-            <p>{4 + 5}</p>
-
-          </header>
+          {
+this.state.monsters.map((monster, index)=> <h1 key={monster.id}>{monster.name}</h1> )
+          }
+        
         </div>
       </div>
     )
